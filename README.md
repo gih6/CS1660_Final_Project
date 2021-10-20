@@ -18,7 +18,12 @@ docker build -t gih6/cs1660project .
 ```
 docker run --rm -it -e DISPLAY=IPADDRESS:0.0 -e GOOGLE_APPLICATION_CREDENTIALS=[FILE.JSON] gih6/cs1660project
 ```
-Please note that this only runs if XLaunch is configured correctly on the local machine. 
+Please note that this only runs if XLaunch is configured correctly on the local machine.
+
+Below is an image showing the application running on XLaunch: 
+
+![image](https://user-images.githubusercontent.com/54678622/138188212-8fd4b4b1-c10a-4a7c-9021-20b24e8aefe9.png)
+
 Can See From Image that the GCP Credentials are read correctly. 
 
 

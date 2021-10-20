@@ -10,8 +10,14 @@
  */
 import java.io.*;
 import javax.swing.JFileChooser;
-public class mainJFrame extends javax.swing.JFrame {
+import com.google.auth.oauth2.GoogleCredentials;
+import com.google.cloud.storage.Storage;
+import com.google.cloud.storage.StorageOptions;
+import com.google.cloud.storage.Bucket;
+import com.google.cloud.storage.BucketInfo;
 
+public class mainJFrame extends javax.swing.JFrame {
+public static GoogleCredentials credential;
    /**
     * TODO:
     * 2. put in front and have button that "performs" 
@@ -29,6 +35,26 @@ public class mainJFrame extends javax.swing.JFrame {
         nSearchPanel.setVisible(false);
         NResults.setVisible(false);
         SearchResults.setVisible(false);
+        
+        try{
+            //Need to see how to SHARE resources from kubernetes cluster.
+            Storage storage = StorageOptions.getDefaultInstance().getService();
+            String bucketName = "my-new-bucket";
+            Bucket bucket = storage.create(BucketInfo.of(bucketName));
+            System.out.printf("This is the bucket %s created .%n",bucket.getName());
+           
+            System.out.println("Trying to get credentials");
+            //not sure what create scoped does ??? 
+            credential = GoogleCredentials.getApplicationDefault().createScoped();
+            System.out.println("Get Access to Google Credentials!");
+            //see if can add file to cluster ?? Shows that has proper communication ?? 
+            
+            
+            
+        }catch(Exception e){
+          System.out.println("This is not working");  
+          System.out.println(e);
+        }
         
     }
 

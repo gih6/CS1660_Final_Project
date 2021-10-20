@@ -38,10 +38,10 @@ public static GoogleCredentials credential;
         
         try{
             //Need to see how to SHARE resources from kubernetes cluster.
-            Storage storage = StorageOptions.getDefaultInstance().getService();
-            String bucketName = "my-new-bucket";
-            Bucket bucket = storage.create(BucketInfo.of(bucketName));
-            System.out.printf("This is the bucket %s created .%n",bucket.getName());
+          //  Storage storage = StorageOptions.getDefaultInstance().getService();
+          //  String bucketName = "my-new-bucket";
+         //   Bucket bucket = storage.create(BucketInfo.of(bucketName));
+         //   System.out.printf("This is the bucket %s created .%n",bucket.getName());
            
             System.out.println("Trying to get credentials");
             //not sure what create scoped does ??? 
@@ -137,19 +137,17 @@ public static GoogleCredentials credential;
                 .addGroup(loadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addGroup(loadPanelLayout.createSequentialGroup()
-                        .addGap(253, 253, 253)
-                        .addComponent(loadFile1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(loadPanelLayout.createSequentialGroup()
-                        .addGap(202, 202, 202)
-                        .addComponent(invertIndicies, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(loadPanelLayout.createSequentialGroup()
                         .addGap(241, 241, 241)
                         .addGroup(loadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
                             .addComponent(file1, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(file2, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(file3, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(361, Short.MAX_VALUE))
+                            .addComponent(file3, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(loadFile1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(loadPanelLayout.createSequentialGroup()
+                        .addGap(163, 163, 163)
+                        .addComponent(invertIndicies, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
         loadPanelLayout.setVerticalGroup(
             loadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -165,9 +163,9 @@ public static GoogleCredentials credential;
                 .addComponent(file2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(file3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
                 .addComponent(invertIndicies, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54))
+                .addGap(60, 60, 60))
         );
 
         jLabel5.setText("Grace Henderson Search Engine");
@@ -464,7 +462,7 @@ public static GoogleCredentials credential;
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(loadPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addContainerGap(18, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(18, 18, 18)
@@ -493,7 +491,7 @@ public static GoogleCredentials credential;
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 356, Short.MAX_VALUE)
+            .addGap(0, 379, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()

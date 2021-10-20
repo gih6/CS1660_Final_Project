@@ -16,7 +16,7 @@ docker build -t gih6/cs1660project .
 ```
 
 ```
-docker run docker run --rm -it -e DISPLAY=IPADDRESS:0.0 -e GOOGLE_APPLICATION_CREDENTIALS=[FILE.JSON] gih6/cs1660project
+docker run --rm -it -e DISPLAY=IPADDRESS:0.0 -e GOOGLE_APPLICATION_CREDENTIALS=[FILE.JSON] gih6/cs1660project
 ```
 Can See From Image that the GCP Credentials are read correctly. 
 

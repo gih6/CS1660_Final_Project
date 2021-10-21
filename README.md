@@ -31,5 +31,5 @@ Can See From Image that the GCP Credentials are read correctly.
 
 1. Followed Steps found here to get the json key: https://cloud.google.com/docs/authentication/production 
 
-Can see in code would throw an error if cannot connect to correct credentials. 
+Can see in code would throw an error if cannot connect to correct credentials. Note the JSON file itself is still locally stored on my computer.
 

@@ -1,4 +1,4 @@
-# CS1660_Final_Project
+# CS1660_Final_Project Option 2
 
 ## Running Application on Terminal
 

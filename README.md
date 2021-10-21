@@ -32,6 +32,7 @@ Can See From Image that the GCP Credentials are read correctly:
 ## Steps to Connect to GCP 
 
 1. Followed Steps found here to get the json key: https://cloud.google.com/docs/authentication/production 
+2. Used this as a resource as well: https://www.tabnine.com/code/java/classes/com.google.auth.oauth2.GoogleCredentials 
 
 Can see in code would throw an error if cannot connect to correct credentials. Note the JSON file itself is still locally stored on my computer.
 

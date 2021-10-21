@@ -18,7 +18,7 @@ docker build -t gih6/cs1660project .
 ```
 docker run --rm -it -e DISPLAY=IPADDRESS:0.0 -e GOOGLE_APPLICATION_CREDENTIALS=[FILE.JSON] gih6/cs1660project
 ```
-Please note that this only runs if XLaunch is configured correctly on the local machine.
+Please note that this only runs if XLaunch is configured correctly on the local machine. This includes reconfigure it for each new IP address and saving the config file in the same directory you run the docker container.
 
 Below is an image showing the application running on XLaunch: 
 

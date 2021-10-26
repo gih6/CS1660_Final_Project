@@ -35,6 +35,8 @@ Can See From Image that the GCP Credentials are read correctly:
 2. Used this as a resource as well: https://www.tabnine.com/code/java/classes/com.google.auth.oauth2.GoogleCredentials 
 3. Github Repo for gooogle credential API: https://github.com/googleapis/google-cloud-java 
 
+Reference to Docker File: https://learnwell.medium.com/how-to-dockerize-a-java-gui-application-bce560abf62a 
+
 Note: MainJFrame.java was used with NetBeans that auto generates a large portion of the code to create the GUI
 
 Can see in code would throw an error if cannot connect to correct credentials. Note the JSON file itself is still locally stored on my computer.

@@ -25,17 +25,19 @@ Below is an image showing the application running on XLaunch:
 
 ## Connecting to GCP
 
-The Connection to GCP will be done by using the package library: com.google.auth.oauth2.GoogleCredentials
+The Connection to GCP will be done by using: com.google.auth.oauth2.GoogleCredentials
 
-This is a package listed from the GCP website and is availablke in the Maven Central Repo. 
+This is a package listed from the GCP website and is available in Maven Central Repository. 
 
-In order to install this dependency I had to update the pom.xml file to download these packages. Once they are here in the code I was able to connect to the google cloud platform using my JSON files. The line in the mainJFrame.java file is trying to get the Google Credentials: 
+To Use the Package I had to update the pom.xml file. 
+
+In the docker file the gloabl varaible GOOGLE_APPLICATION_CREDENTIALS path set to JSON file.
+
+The line in the mainJFrame.java attempts to get the Google Credentials: 
 
 ```
  credential = GoogleCredentials.getApplicationDefault();
  ```
-
-Note in the docker file the gloabl varaible GOOGLE_APPLICATION_CREDENTIAL path had to be set.
 
 Can See From Image that when the application is run the GCP Credentials are read correctly: 
 

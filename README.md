@@ -29,11 +29,15 @@ The Connection to GCP will be done by using the package library: com.google.auth
 
 This is a package listed from the GCP website and is availablke in the Maven Central Repo. 
 
-In order to install this dependency I had to update the pom.xml file to download these packages. Once they are here in the code I was able to connect to the google cloud platform using my JSON files. 
+In order to install this dependency I had to update the pom.xml file to download these packages. Once they are here in the code I was able to connect to the google cloud platform using my JSON files. The line in the mainJFrame.java file is trying to get the Google Credentials: 
 
+```
+ credential = GoogleCredentials.getApplicationDefault();
+ ```
 
+Note in the docker file the gloabl varaible GOOGLE_APPLICATION_CREDENTIAL path had to be set.
 
-Can See From Image that the GCP Credentials are read correctly: 
+Can See From Image that when the application is run the GCP Credentials are read correctly: 
 
 ![image](https://user-images.githubusercontent.com/54678622/138188874-a769617f-142b-468e-a556-bfa035b77d17.png)
 

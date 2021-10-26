@@ -25,11 +25,12 @@ Below is an image showing the application running on XLaunch:
 
 ## Connecting to GCP
 
+The Connection to GCP will be done by using the package library: 
+
 Can See From Image that the GCP Credentials are read correctly: 
 
 ![image](https://user-images.githubusercontent.com/54678622/138188874-a769617f-142b-468e-a556-bfa035b77d17.png)
 
-![image](https://user-images.githubusercontent.com/54678622/138188919-11a54ec4-54c5-405c-b5ad-8c6642f807a3.png)
 
 ## Siting Sources
 

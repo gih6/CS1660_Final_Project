@@ -39,7 +39,7 @@ The line in the mainJFrame.java attempts to get the Google Credentials:
  credential = GoogleCredentials.getApplicationDefault();
  ```
 
-Can See From Image that when the application is run the GCP Credentials are read correctly: 
+Can See From Image that when the application is run the GCP Credentials are read correctly and no error is thrown: 
 
 ![image](https://user-images.githubusercontent.com/54678622/138188874-a769617f-142b-468e-a556-bfa035b77d17.png)
 
@@ -52,6 +52,4 @@ Can See From Image that when the application is run the GCP Credentials are read
 Reference to Docker File: https://learnwell.medium.com/how-to-dockerize-a-java-gui-application-bce560abf62a 
 
 Note: MainJFrame.java was used with NetBeans that auto generates a large portion of the code to create the GUI
-
-Can see in code would throw an error if cannot connect to correct credentials. Note the JSON file itself is still locally stored on my computer and in the docker container created and stored locally on my machine.
 

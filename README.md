@@ -25,7 +25,13 @@ Below is an image showing the application running on XLaunch:
 
 ## Connecting to GCP
 
-The Connection to GCP will be done by using the package library: 
+The Connection to GCP will be done by using the package library: com.google.auth.oauth2.GoogleCredentials
+
+This is a package listed from the GCP website and is availablke in the Maven Central Repo. 
+
+In order to install this dependency I had to update the pom.xml file to download these packages. Once they are here in the code I was able to connect to the google cloud platform using my JSON files. 
+
+
 
 Can See From Image that the GCP Credentials are read correctly: 
 

@@ -37,15 +37,16 @@ public static GoogleCredentials credential;
         SearchResults.setVisible(false);
         
         try{
-            //Need to see how to SHARE resources from kubernetes cluster.
-          //  Storage storage = StorageOptions.getDefaultInstance().getService();
-          //  String bucketName = "my-new-bucket";
-         //   Bucket bucket = storage.create(BucketInfo.of(bucketName));
-         //   System.out.printf("This is the bucket %s created .%n",bucket.getName());
+            
+           //Running test code from Google Auth Web page Examples
+          /*  Storage storage = StorageOptions.getDefaultInstance().getService();
+            String bucketName = "my-new-bucket";
+            Bucket bucket = storage.create(BucketInfo.of(bucketName));
+           System.out.printf("This is the bucket %s created .%n",bucket.getName());*/
            
             System.out.println("Trying to get credentials");
             //not sure what create scoped does ??? 
-            credential = GoogleCredentials.getApplicationDefault().createScoped();
+            credential = GoogleCredentials.getApplicationDefault();
             System.out.println("Get Access to Google Credentials!");
             //see if can add file to cluster ?? Shows that has proper communication ?? 
             

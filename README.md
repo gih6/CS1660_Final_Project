@@ -48,11 +48,10 @@ Can See From Image that when the application is run the GCP Credentials are read
 
 1. Followed Steps found here to get the json key: https://cloud.google.com/docs/authentication/production 
 2. Github Repo for gooogle credential API: https://github.com/googleapis/google-cloud-java 
-3. Inverted Index -- took notes from this reference: https://github.com/imehrdadmahdavi/map-reduce-inverted-index/blob/master/InvertedIndex.java 
+3. Inverted Index Job took notes from this reference: https://github.com/imehrdadmahdavi/map-reduce-inverted-index/blob/master/InvertedIndex.java 
 4. Running Hadoop Job got from: https://cloud.google.com/dataproc/docs/samples/dataproc-submit-hadoop-fs-job 
 5. Word Count: Taken from class notes 
-
-Reference to Docker File: https://learnwell.medium.com/how-to-dockerize-a-java-gui-application-bce560abf62a 
+6. Reference to Docker File: https://learnwell.medium.com/how-to-dockerize-a-java-gui-application-bce560abf62a 
 
 Note: MainJFrame.java was used with NetBeans that auto generates a large portion of the code to create the GUI
 

@@ -92,12 +92,3 @@ public class invertedIndex{
     }
 }
 
-//Notes on the Inverting Indexes:
-//want  to sort by BOTH FOLDER and FILE NAME and by WORD!! -- need to modify this as such
-/*
-bye	5722018411:1
-goodbye	6722018415:1
-hadoop	6722018415:2
-hello	5722018411:1 6722018415:1
-world	5722018411:2
- */

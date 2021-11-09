@@ -36,6 +36,28 @@ public class invertedIndex{
             StringTokenizer itr = new StringTokenizer(value.toString().toLowerCase().replaceAll("\\d","").replaceAll("[^a-zA-Z ]",""));
             while (itr.hasMoreTokens()) {
                     String wordDoc = itr.nextToken();
+                //stop list 
+                if(wordDoc.equals("if") ||
+                            wordDoc.equals("he")||
+                            wordDoc.equals("she")||
+                            wordDoc.equals("and")||
+                            wordDoc.equals("can")||
+                            wordDoc.equals("of")||
+                            wordDoc.equals("a") ||
+                            wordDoc.equals("an") ||
+                            wordDoc.equals("to") ||
+                            wordDoc.equals("the") ||
+                            wordDoc.equals("in") ||
+                            wordDoc.equals("is") ||
+                            wordDoc.equals("it") ||
+                            wordDoc.equals("from") ||
+                            wordDoc.equals("for") ||
+                            wordDoc.equals("not") ||
+                            wordDoc.equals("this") ||
+                            wordDoc.equals("i")
+                    ) {
+                        continue;
+                    }
                     if(count.containsKey(wordDoc)){
                         count.put(wordDoc,count.get(wordDoc)+1); // adding to existing on
                     }else{

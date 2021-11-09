@@ -35,6 +35,7 @@ public class mainJFrame extends javax.swing.JFrame {
     HashMap<String,String> invertedIndex = new HashMap<String,String>();
     ArrayList<Word> nFreq = new ArrayList<>();
     File files[];
+    File dir[];
     /**
      * TODO:
      * 2. put in front and have button that "performs"
@@ -49,7 +50,7 @@ public class mainJFrame extends javax.swing.JFrame {
             throws IOException, InterruptedException {
         String projectId = "hadoopclassdemo";
         String region = "us-central1";
-        String clusterName = "cluster-e8a5";
+        String clusterName = "cluster-672c";
 
         String myEndpoint = String.format("%s-dataproc.googleapis.com:443", region);
 
@@ -605,15 +606,25 @@ public class mainJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.out.println("We are looking for files!");
         jFileChooser1.setMultiSelectionEnabled(true);
-        if(jFileChooser1.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+        jFileChooser1.setFileSelectionMode(2);
+
+
+        if (jFileChooser1.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
             System.out.println("HERE!");
-            files = jFileChooser1.getSelectedFiles();
-            for (File fil : files) {
-                System.out.println("File path" + fil.getAbsolutePath());
+            dir = jFileChooser1.getSelectedFiles();
+            for (File dirs : dir) {
+                System.out.println("Directory path: " + dirs.getAbsolutePath());
+                //need to get actual FILES IN DIRECTORIES
+                files = dirs.listFiles();
+                if (files != null) {
+                    for (File child : files) {
+                       System.out.println(child.getAbsolutePath());
+                    }
+               }
+
             }
 
         }
-
     }
 
     private void invertIndiciesActionPerformed(java.awt.event.ActionEvent evt) {
@@ -621,20 +632,20 @@ public class mainJFrame extends javax.swing.JFrame {
         System.out.println("Inverting Indicies");
         //HERE UPDATING THE DATA FILE INPUT AND UPLOADING TO STORAGE BUCKET
         try {
-         /*   for(File fil: files){
+            for(File fil: files){
                 BlobId blobId = BlobId.of("dataproc-staging-us-central1-539509881682-oyavh2pt",   "Data/"+ fil.getName());
                 BlobInfo blobInfo = BlobInfo.newBuilder(blobId).build();
                 String filePath = fil.getAbsolutePath();
                 storage.create(blobInfo, Files.readAllBytes(Paths.get(filePath)));
-          }*/
+          }
             //Now that it is in the Files we want to create a hadoop job that runs the Inverted Index Algorithm.
             String projectId = "hadoopclassdemo";
             String region = "us-central1";
-            String clusterName = "cluster-e8a5";
+            String clusterName = "cluster-672c";
             //create inverted Index -- comment out for speed
             /*TODO NEED TO JUST TEST DOING THEM BACK TO BACK*/
-         //   submitHadoopFsJob("ii.jar" , "invertedIndex","Data","Output");
-         //   submitHadoopFsJob("wc.jar" , "WordCount","Data","OutputFreq");
+            submitHadoopFsJob("ii.jar" , "invertedIndex","Data","Output"); //inverted index job
+            submitHadoopFsJob("wc.jar" , "WordCount","Data","OutputFreq"); //most frequent job
             //here need to input the data for running! -- input inverted index.
             Blob blob2 = storage.get("dataproc-staging-us-central1-539509881682-oyavh2pt", "Output/part-r-00000");
             String fileContent = new String(blob2.getContent());
@@ -747,10 +758,11 @@ public class mainJFrame extends javax.swing.JFrame {
             String input = invertedIndex.get(searchTerm.getText().toString());
             System.out.println(input);
             StringTokenizer multiTokenizer = new StringTokenizer(input, ",");
+            int count=0;
                 while(multiTokenizer.hasMoreTokens()){
                     String file = multiTokenizer.nextToken();
                     String[] split = file.split(":");
-                    searchResultsTable.addRow(new Object[]{"null","null",split[0],split[1]});
+                    searchResultsTable.addRow(new Object[]{count,"Data",split[0],split[1]});
                 }
         }
         long elapsedTime = System.currentTimeMillis() - startTime;

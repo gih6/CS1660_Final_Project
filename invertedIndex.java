@@ -24,7 +24,7 @@ public class invertedIndex{
 
         public void map(Object key, Text value, Context context
         ) throws IOException, InterruptedException {
-            //want to get rid of punctuation and uppercase letters.
+         //want to get rid of punctuation and uppercase letters.
             //get File Name:
             FileSplit split = (FileSplit) context.getInputSplit();
             filename = split.getPath().getName();
@@ -32,15 +32,27 @@ public class invertedIndex{
             path = path.getParent();
             parentName = path.getName();
             //here setting document name in TEXT FILE!!!
-            doc.set(filename);
             //make sure only lower cased words are used and no numbers counted!!
             StringTokenizer itr = new StringTokenizer(value.toString().toLowerCase().replaceAll("\\d","").replaceAll("[^a-zA-Z ]",""));
             while (itr.hasMoreTokens()) {
-                word.set(itr.nextToken());
-                context.write(word, doc);
+                    String wordDoc = itr.nextToken();
+                    if(count.containsKey(wordDoc)){
+                        count.put(wordDoc,count.get(wordDoc)+1); // adding to existing on
+                    }else{
+                        count.put(wordDoc,1); //first instance of word in file
+                    }
+                }
+            //need to iterate through entire hash map
+            for (Map.Entry<String, Integer> entry : count.entrySet()) {
+             //   System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+                word.set(entry.getKey());
+                doc.set(filename + ":" + entry.getValue());
+                context.write(word, doc );
+            }
+
+
             }
         }
-    }
 
     public static class IntSumReducer
             extends Reducer<Text,Text,Text,Text> {
@@ -49,21 +61,13 @@ public class invertedIndex{
         public void reduce(Text key, Iterable<Text> values,
                            Context context
         ) throws IOException, InterruptedException {
-
-           //Iterate through and COUNT ALL WORDS within document with HASH MAP!!!
+            //Iterate through and COUNT ALL WORDS within document with HASH MAP!!!
             //fastest way to count values.
-            HashMap<String,Integer> count = new HashMap<String,Integer>();
-            for(Text val: values){
-                if(count.containsKey(val.toString())){
-                    count.put(val.toString(),count.get(val.toString())+1); // adding to existing on
-                }else{
-                    count.put(val.toString(),1); //first instance of word in file
-                }
-            }
+
             //now have created map of all files used.
             StringBuilder list = new StringBuilder();
-            for(String file: count.keySet()){
-                list.append(file + ":" +count.get(file) + "," );
+            for (Text val : values) {
+                list.append(val + " , " );
             }
             result.set(list.toString());
             context.write(key, result);

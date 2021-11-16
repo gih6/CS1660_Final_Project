@@ -5,7 +5,7 @@
 Source Code can be found: src/main/java/mainJFrame.java
 
 
-Link to Docker Container: https://hub.docker.com/repository/docker/gih6/cs1660new
+Link to Docker Container: https://hub.docker.com/r/gih6/cs1660new
 
 ## Docker File Used to Create Application
 

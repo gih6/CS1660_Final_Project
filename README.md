@@ -47,6 +47,9 @@ Can See From Image that when the application is run the GCP Credentials are read
 
 https://drive.google.com/file/d/1R6dOHo03BvVGftJQbvpLQw0tNyBPMGg1/view?usp=sharing
 
+If the above link doesn't work try: https://pitt-my.sharepoint.com/:v:/g/personal/gih6_pitt_edu/EcKBTAgcvatCrDd3PfCUngwBBNqQ9orLoX4BFmW4UDPqCg?e=Z7Xf3E 
+
+
 ## Code Walk Through 
 
 https://drive.google.com/file/d/1pnKbBxZcNV3PbiqotIwYXSqYWRcFuPU1/view?usp=sharing 

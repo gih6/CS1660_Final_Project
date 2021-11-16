@@ -5,7 +5,7 @@
 Source Code can be found: src/main/java/mainJFrame.java
 
 
-Link to Docker Container: https://hub.docker.com/repository/docker/gih6/cs1660project 
+Link to Docker Container: https://hub.docker.com/repository/docker/gih6/cs1660new
 
 ## Docker File Used to Create Application
 
@@ -15,7 +15,7 @@ docker build -t gih6/cs1660project .
 ## Running The Application 
 
 ```
-docker run --rm -it -e DISPLAY=IPADDRESS:0.0  gih6/cs1660project
+docker run --rm -it -e DISPLAY=IPADDRESS:0.0  gih6/cs1660new
 ```
 Please note that this only runs if XLaunch is configured correctly on the local machine. This includes reconfigure it for each new IP address and saving the config file in the same directory you run the docker container.
 
@@ -42,6 +42,10 @@ The line in the mainJFrame.java attempts to get the Google Credentials:
 Can See From Image that when the application is run the GCP Credentials are read correctly and no error is thrown: 
 
 ![image](https://user-images.githubusercontent.com/54678622/138188874-a769617f-142b-468e-a556-bfa035b77d17.png)
+
+## Video of Working
+
+## Code Walk Through 
 
 
 ## Siting Sources

@@ -43,14 +43,14 @@ Can See From Image that when the application is run the GCP Credentials are read
 
 ![image](https://user-images.githubusercontent.com/54678622/138188874-a769617f-142b-468e-a556-bfa035b77d17.png)
 
-## Video of Working
+## Video of Application Running
 
 https://drive.google.com/file/d/1R6dOHo03BvVGftJQbvpLQw0tNyBPMGg1/view?usp=sharing
 
 If the above link doesn't work try: https://pitt-my.sharepoint.com/:v:/g/personal/gih6_pitt_edu/EcKBTAgcvatCrDd3PfCUngwBBNqQ9orLoX4BFmW4UDPqCg?e=Z7Xf3E 
 
 
-## Code Walk Through 
+## Video of Code Walk Through 
 
 https://drive.google.com/file/d/1pnKbBxZcNV3PbiqotIwYXSqYWRcFuPU1/view?usp=sharing 
 

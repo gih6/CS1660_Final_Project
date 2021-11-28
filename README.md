@@ -45,14 +45,20 @@ Can See From Image that when the application is run the GCP Credentials are read
 
 ## Video of Application Running
 
-https://drive.google.com/file/d/1R6dOHo03BvVGftJQbvpLQw0tNyBPMGg1/view?usp=sharing
+https://pitt-my.sharepoint.com/:v:/g/personal/gih6_pitt_edu/EcKBTAgcvatCrDd3PfCUngwBBNqQ9orLoX4BFmW4UDPqCg?e=Z7Xf3E 
 
-If the above link doesn't work try: https://pitt-my.sharepoint.com/:v:/g/personal/gih6_pitt_edu/EcKBTAgcvatCrDd3PfCUngwBBNqQ9orLoX4BFmW4UDPqCg?e=Z7Xf3E 
+If the above link doesn't work try: https://drive.google.com/file/d/1R6dOHo03BvVGftJQbvpLQw0tNyBPMGg1/view?usp=sharing
 
 
 ## Video of Code Walk Through 
 
+https://pitt-my.sharepoint.com/:v:/g/personal/gih6_pitt_edu/Edsqg9iV-vtCsoNQ3wnpY0cBEJJwfonA1h-oZ04lDd6WMQ?e=CElLzd
+
+If this doesn't work then try this: 
+
 https://drive.google.com/file/d/1pnKbBxZcNV3PbiqotIwYXSqYWRcFuPU1/view?usp=sharing 
+
+
 
 Note:
 Inverted Index was used to create inverted indicies

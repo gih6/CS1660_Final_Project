@@ -11,8 +11,8 @@ import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.input.FileSplit;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+
 //reference to this is from https://github.com/imehrdadmahdavi/map-reduce-inverted-index/blob/master/InvertedIndex.java
-//reference for running jobs: http://www-scf.usc.edu/~shin630/Youngmin/files/HadoopInvertedIndexV5.pdf
 public class invertedIndex{
     //key is the TERM value is the Count & Document it is from!!
     public static class TokenizerMapper
@@ -21,6 +21,7 @@ public class invertedIndex{
         String parentName;
         private Text word = new Text();
         private Text doc = new Text();
+        //map to count 
         HashMap<String,Integer> count = new HashMap<String,Integer>();
 
         public void map(Object key, Text value, Context context
@@ -29,9 +30,9 @@ public class invertedIndex{
             //get File Name:
             FileSplit split = (FileSplit) context.getInputSplit();
             filename = split.getPath().getName();
-            Path path = split.getPath();
-            path = path.getParent();
-            parentName = path.getName();
+         //   Path path = split.getPath();
+         //   path = path.getParent();
+         //   parentName = path.getName();
             //here setting document name in TEXT FILE!!!
             //make sure only lower cased words are used and no numbers counted!!
             StringTokenizer itr = new StringTokenizer(value.toString().toLowerCase().replaceAll("\\d","").replaceAll("[^a-zA-Z ]",""));
@@ -60,7 +61,7 @@ public class invertedIndex{
                         continue;
                     }
                     if(count.containsKey(wordDoc)){
-                        count.put(wordDoc,count.get(wordDoc)+1); // adding to existing on
+                        count.put(wordDoc,count.get(wordDoc)+1); // adding to existing one
                     }else{
                         count.put(wordDoc,1); //first instance of word in file
                     }
@@ -68,8 +69,8 @@ public class invertedIndex{
             //need to iterate through entire hash map
             for (Map.Entry<String, Integer> entry : count.entrySet()) {
              //   System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
-                word.set(entry.getKey());
-                doc.set(filename + ":" + entry.getValue());
+                word.set(entry.getKey()); //get word 
+                doc.set(filename + ":" + entry.getValue()); // set the filename & count
                 context.write(word, doc );
             }
 

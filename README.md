@@ -59,9 +59,10 @@ https://drive.google.com/file/d/1pnKbBxZcNV3PbiqotIwYXSqYWRcFuPU1/view?usp=shari
 1. Followed Steps found here to get the json key: https://cloud.google.com/docs/authentication/production 
 2. Github Repo for gooogle credential API: https://github.com/googleapis/google-cloud-java 
 3. Inverted Index Job took notes from this reference: https://github.com/imehrdadmahdavi/map-reduce-inverted-index/blob/master/InvertedIndex.java 
-4. Running Hadoop Job got from: https://cloud.google.com/dataproc/docs/samples/dataproc-submit-hadoop-fs-job 
-5. Word Count: Taken from class notes 
-6. Reference to Docker File: https://learnwell.medium.com/how-to-dockerize-a-java-gui-application-bce560abf62a 
+4. Inverted Index: v\https://www.fatalerrors.org/a/mapreduce-programming-document-inverted-index.html
+5. Running Hadoop Job got from: https://cloud.google.com/dataproc/docs/samples/dataproc-submit-hadoop-fs-job 
+6. Word Count: Taken from class notes 
+7. Reference to Docker File: https://learnwell.medium.com/how-to-dockerize-a-java-gui-application-bce560abf62a 
 
 
 Note: MainJFrame.java was used with NetBeans that auto generates a large portion of the code to create the GUI

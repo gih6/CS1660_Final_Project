@@ -91,12 +91,9 @@ public class mainJFrame extends javax.swing.JFrame {
             Storage storage = StorageOptions.getDefaultInstance().getService();
             Blob blob = storage.get(matches.group(1), String.format("%s.000000000", matches.group(2)));
 
-            System.out.println(
-                    String.format("Job finished successfully: %s", new String(blob.getContent())));
-
         } catch (ExecutionException e) {
             // If the job does not complete successfully, print the error message.
-            System.err.println(String.format("submitHadoopFSJob: %s ", e.getMessage()));
+            System.err.println(String.format("Hadoop Job: %s ", e.getMessage()));
         }
     }
 

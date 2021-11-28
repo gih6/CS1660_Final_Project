@@ -52,8 +52,6 @@ If the above link doesn't work try: https://drive.google.com/file/d/1R6dOHo03BvV
 
 ## Video of Code Walk Through 
 
-https://pitt-my.sharepoint.com/:v:/g/personal/gih6_pitt_edu/Edsqg9iV-vtCsoNQ3wnpY0cBEJJwfonA1h-oZ04lDd6WMQ?e=CElLzd
-
 If this doesn't work then try this: 
 
 https://drive.google.com/file/d/1pnKbBxZcNV3PbiqotIwYXSqYWRcFuPU1/view?usp=sharing 

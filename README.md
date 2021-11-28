@@ -54,6 +54,11 @@ If the above link doesn't work try: https://pitt-my.sharepoint.com/:v:/g/persona
 
 https://drive.google.com/file/d/1pnKbBxZcNV3PbiqotIwYXSqYWRcFuPU1/view?usp=sharing 
 
+Note:
+Inverted Index was used to create inverted indicies
+WordCount was used to create top N frequencies, when this count was downloaded into the actual program the program than sorted the list from max to least occurances.
+This solution ran 2 hadoop fs jobs. 
+
 ## Siting Sources
 
 1. Followed Steps found here to get the json key: https://cloud.google.com/docs/authentication/production 

@@ -21,6 +21,7 @@ public class invertedIndex{
         String parentName;
         private Text word = new Text();
         private Text doc = new Text();
+        HashMap<String,Integer> count = new HashMap<String,Integer>();
 
         public void map(Object key, Text value, Context context
         ) throws IOException, InterruptedException {
